@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo en Chile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        /* Estilos para el menú desplegable */
+        .dropdown {
+            display: none;
+            position: fixed;
+            background-color: #f9f9f9;
+            width: 200px; /* Ancho del menú desplegable */
+            height: 100%; /* Altura del menú desplegable que ocupa toda la página */
+            overflow-y: scroll; /* Agrega una barra de desplazamiento vertical si es necesario */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+        }
+
+        #imagenActivadora {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            background-image: url("imagenes/foto menu.png");
+            background-size: 30px;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-family: "Glacial Indifference", sans-serif;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Estilos home */
+        .round-button {
+        display: block;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        background-color: #dbb134;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+        margin: 0 auto; /* Centra horizontalmente el botón en el centro de la página */
+        font-size: 24px;
+        font-family: "Glacial Indifference", sans-serif;
+        }
+
+        p {
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            line-height: 1.5;
+            text-align: justify; /* Centra el párrafo */
+            font-size: 16px; /* Cambia el tamaño de la fuente a 16 píxeles (ajusta según tu preferencia) */
+            font-family: "Glacial Indifference", sans-serif;
+        }
+
+        /* Estilos para el menú de filtros */
+        .filter-menu {
+            padding: 10px;
+        }
+
+        /* Estilos para la lista de filtros sin puntos */
+        .filter-list {
+            list-style: none; /* Elimina los puntos de la lista */
+            padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+        }
+
+        .filter-list li {
+            margin: 10px 0; /* Añade margen superior e inferior a cada elemento de la lista */
+        }
+
+        .filter-list label {
+            display: inline-block; /* Coloca las etiquetas en línea con los elementos de la lista */
+        }
+
+        /* Estilos para las listas de filtros */
+        .filter-list {
+            list-style: none; /* Elimina los puntos de la lista */
+            padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+        }
+
+        .filter-list li {
+            margin: 10px 0; /* Añade margen superior e inferior a cada elemento de la lista */
+        }
+
+        .filter-list label {
+            display: inline-block; /* Coloca las etiquetas en línea con los elementos de la lista */
+        }
+
+        .filter-title {
+            cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el título */
+        }
+    </style>
+</head>
+<body>
+    <header>Turismo en Chile</header>
+    <p>El objetivo de nuestra página web es acercar a ti los datos relacionados al turismo en Chile y facilitar su visualización, y así promover que esta actividad se realice y desarrolle de manera informada, respetuosa y sostenible, para poder sacarle el mayor provecho a nuestro país y a las oportunidades de mejora en la industria del turismo.</p>
+    <a href="#contenido" class="round-button">Comenzemos!</a>
+    <div id="imagenActivadora"></div>
+    <div class="dropdown" id="menuDesplegable">
+        <!-- Menú de filtros en forma de listas con títulos -->
+        <div class="filter-title" onclick="selectFilterGroup('filtro-group-1')">Clima</div>
+        <ul class="filter-list" id="filtro-group-1">
+            <li>
+                <label for="filtro1">Desertico y Semiárido</label>
+                <input type="checkbox" id="filtro1" name="filtros" value="filtro1">
+            </li>
+            <li>
+                <label for="filtro2">Mediterráneo</label>
+                <input type="checkbox" id="filtro2" name="filtros" value="filtro2">
+            </li>
+            <li>
+                <label for="filtro3">Continental Subalpino</label>
+                <input type="checkbox" id="filtro3" name="filtros" value="filtro3">
+            </li>
+            <li>
+                <label for="filtro4">Templado Oceánico</label>
+                <input type="checkbox" id="filtro4" name="filtros" value="filtro4">
+            </li>
+            <li>
+                <label for="filtro5">Tropical</label>
+                <input type="checkbox" id="filtro5" name="filtros" value="filtro5">
+            </li>
+        </ul>
+        
+        <!-- Repite esta estructura para los otros grupos de filtros -->
+        <div class="filter-title" onclick="selectFilterGroup('filtro-group-2')">Actividades</div>
+        <ul class="filter-list" id="filtro-group-2">
+            <li>
+                <label for="filtro1">Cultural</label>
+                <input type="checkbox" id="filtro1" name="filtros" value="filtro1">
+            </li>
+            <li>
+                <label for="filtro2">Gastronómica</label>
+                <input type="checkbox" id="filtro2" name="filtros" value="filtro2">
+            </li>
+            <li>
+                <label for="filtro3">Deportiva</label>
+                <input type="checkbox" id="filtro3" name="filtros" value="filtro3">
+            </li>
+            <li>
+                <label for="filtro4">Religiosa</label>
+                <input type="checkbox" id="filtro4" name="filtros" value="filtro4">
+            </li>
+            <li>
+                <label for="filtro5">Comercial</label>
+                <input type="checkbox" id="filtro5" name="filtros" value="filtro5">
+            </li>
+        </ul>
+
+        <div class="filter-title" onclick="selectFilterGroup('filtro-group-3')">Regiones</div>
+        <ul class="filter-list" id="filtro-group-3">
+            <li>
+                <label for="filtro1">Arica y Parinacota</label>
+                <input type="checkbox" id="filtro1" name="filtros" value="filtro1">
+            </li>
+            <li>
+                <label for="filtro2">Tarapacá</label>
+                <input type="checkbox" id="filtro2" name="filtros" value="filtro2">
+            </li>
+            <li>
+                <label for="filtro3">Antofagasta</label>
+                <input type="checkbox" id="filtro3" name="filtros" value="filtro3">
+            </li>
+            <li>
+                <label for="filtro4">Atacama</label>
+                <input type="checkbox" id="filtro4" name="filtros" value="filtro4">
+            </li>
+            <li>
+                <label for="filtro5">Coquimbo</label>
+                <input type="checkbox" id="filtro5" name="filtros" value="filtro5">
+            </li>
+            <li>
+                <label for="filtro6">Valparaíso</label>
+                <input type="checkbox" id="filtro6" name="filtros" value="filtro6">
+            </li>
+            <li>
+                <label for="filtro7">Metropolitana</label>
+                <input type="checkbox" id="filtro7" name="filtros" value="filtro7">
+            </li>
+            <li>
+                <label for="filtro8">O'Higgings</label>
+                <input type="checkbox" id="filtro8" name="filtros" value="filtro8">
+            </li>
+            <li>
+                <label for="filtro9">Maule</label>
+                <input type="checkbox" id="filtro9" name="filtros" value="filtro9">
+            </li>
+            <li>
+                <label for="filtro10">Ñuble</label>
+                <input type="checkbox" id="filtro10" name="filtros" value="filtro10">
+            </li>
+            <li>
+                <label for="filtro11">Biobío</label>
+                <input type="checkbox" id="filtro11" name="filtros" value="filtro11">
+            </li>
+            <li>
+                <label for="filtro12">La Araucanía</label>
+                <input type="checkbox" id="filtro12" name="filtros" value="filtro12">
+            </li>
+            <li>
+                <label for="filtro13">Los Ríos</label>
+                <input type="checkbox" id="filtro13" name="filtros" value="filtro13">
+            </li>
+            <li>
+                <label for="filtro14">Los Lagos</label>
+                <input type="checkbox" id="filtro14" name="filtros" value="filtro14">
+            </li>
+            <li>
+                <label for="filtro15">Aysén</label>
+                <input type="checkbox" id="filtro15" name="filtros" value="filtro15">
+            </li>
+            <li>
+                <label for="filtro16">Magallanes y Antártica</label>
+                <input type="checkbox" id="filtro16" name="filtros" value="filtro16">
+            </li>
+        </ul>
+
+        <div class="filter-title" onclick="selectFilterGroup('filtro-group-4')">Áreas Protegidas</div>
+        <ul class="filter-list" id="filtro-group-4">
+            <li>
+                <label for="filtro1">Parques Nacionales</label>
+                <input type="checkbox" id="filtro1" name="filtros" value="filtro1">
+            </li>
+            <li>
+                <label for="filtro2">Reserva Región Virgen</label>
+                <input type="checkbox" id="filtro2" name="filtros" value="filtro2">
+            </li>
+            <li>
+                <label for="filtro3">Monumento Natural</label>
+                <input type="checkbox" id="filtro3" name="filtros" value="filtro3">
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Mapa interactivo de Chile -->
+    <div id="map" style="display: none; width: 100%; height: 300px; background-color: lightgray;">Inserta aquí tu mapa interactivo</div>
+
+    <script>
+        // JavaScript para controlar el despliegue del menú al hacer clic en el imagen
+        var imagenActivadora = document.getElementById("imagenActivadora");
+        var menuDesplegable = document.getElementById("menuDesplegable");
+        var map = document.getElementById("map");
+
+        imagenActivadora.addEventListener("click", function(event) {
+            event.stopPropagation(); // Evita que el evento llegue a document
+            menuDesplegable.style.display = menuDesplegable.style.display === "block" ? "none" : "block";
+            map.style.display = "none"; // Oculta el mapa al abrir el menú
+        });
+
+        // Evita que el menú se cierre al hacer clic en él
+        menuDesplegable.addEventListener("click", function(event) {
+            event.stopPropagation(); // Evita que el evento llegue a document
+        });
+
+        // Cerrar el menú al hacer clic fuera de él
+        document.addEventListener("click", function() {
+            menuDesplegable.style.display = "none";
+        });
+
+        // Función para seleccionar todo el contenido de un grupo de filtros y cerrar el menú
+        function selectFilterGroup(groupID) {
+            var filterGroup = document.getElementById(groupID);
+            if (filterGroup) {
+                var checkboxes = filterGroup.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = true;
+                });
+                menuDesplegable.style.display = "none";
+            }
+        }
+
+        // Función para seleccionar todo el contenido de un grupo de filtros y mostrar el mapa
+        function selectFilterGroup(groupID) {
+            var filterGroup = document.getElementById(groupID);
+            if (filterGroup) {
+                var checkboxes = filterGroup.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = true;
+                });
+                menuDesplegable.style.display = "none";
+                map.style.display = "block"; // Muestra el mapa al seleccionar un filtro
+            }
+        }
+
+        function selectFilterGroup(groupID) {
+        var filterGroup = document.getElementById(groupID);
+        if (filterGroup) {
+            var checkboxes = filterGroup.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = true;
+            });
+            menuDesplegable.style.display = "none";
+            map.style.display = "block"; // Muestra el mapa al seleccionar un filtro
+
+            // Oculta el párrafo y el botón
+            document.querySelector("p").style.display = "none";
+            document.querySelector(".round-button").style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>
