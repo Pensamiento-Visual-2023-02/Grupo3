@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina web</title>
-    <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Turismo en Chile</h1>
+    <div id="imagenSuperior">
+        <img src="Imagenes/foto paisaje inicio.png" alt="Imagen Superior">
+    </div>
     <div id="filtros">
-        <button class="filtro" data-tag="Atacama">Atacama</button>
         <button class="filtro" data-tag="Arica y Parinacota">Arica y Parinacota</button>
-        <button class="filtro" data-tag="Libertador Bernardo O'Higgins">Libertador Bernardo O'Higgins</button>
+        <button class="filtro" data-tag="Tarapaca">Tarapacá</button>
+        <button class="filtro" data-tag="Antofagasta">Antofagasta</button>
+        <button class="filtro" data-tag="Atacama">Atacama</button>
+        <button class="filtro" data-tag="Coquimbo">Coquimbo</button>
+        <button class="filtro" data-tag="Valparaíso">Valparaíso</button>
+        <button class="filtro" data-tag="Metropolitana">Metropolitana</button>
+        <button class="filtro" data-tag="O'Higgins">O'Higgins</button>
+        <button class="filtro" data-tag="Maule">Maule</button>
+        <button class="filtro" data-tag="Ñuble">Ñuble</button>
+        <button class="filtro" data-tag="Bío-bío">Bío-bío</button>
+        <button class="filtro" data-tag="Araucanía">Araucanía</button>
+        <button class="filtro" data-tag="Los Ríos">Los Ríos</button>
+        <button class="filtro" data-tag="Los Lagos">Los Lagos</button>
+        <button class="filtro" data-tag="Áysen">Áysen</button>
+        <button class="filtro" data-tag="Magallanes">Magallanes</button>
     </div>
     
     <!-- Imágenes con etiquetas -->
@@ -22,6 +37,7 @@
         <img src="Imagenes/foto clima.png" data-tags="Libertador Bernardo O'Higgins" class="imagen">
         <!-- Otras imágenes con etiquetas -->
     </div>
-    
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="etiquetas.js"></script>
 </body>
 </html>

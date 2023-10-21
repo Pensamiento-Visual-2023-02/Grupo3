@@ -1,0 +1,7 @@
+#imagenSuperior {
+    position: fixed; /* Fija la imagen en la ventana del navegador */
+    top: 0; /* Coloca la imagen en la parte superior */
+    left: 0; /* Coloca la imagen en la parte izquierda */
+    z-index: 9999; /* Asegura que la imagen esté en la capa superior (puedes ajustar el valor según sea necesario) */
+    /* Agrega otros estilos, como ancho, altura o márgenes según tus preferencias */
+}
