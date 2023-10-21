@@ -1,7 +1,17 @@
-#imagenSuperior {
-    position: fixed; /* Fija la imagen en la ventana del navegador */
-    top: 0; /* Coloca la imagen en la parte superior */
-    left: 0; /* Coloca la imagen en la parte izquierda */
-    z-index: 9999; /* Asegura que la imagen esté en la capa superior (puedes ajustar el valor según sea necesario) */
-    /* Agrega otros estilos, como ancho, altura o márgenes según tus preferencias */
+.imagen-con-texto {
+    position: relative; /* Importante para el posicionamiento relativo */
+}
+
+.imagen-con-texto img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto original */
+}
+
+.texto-superpuesto {
+    position: absolute; /* Coloca el texto sobre la imagen */
+    top: 0; /* Alinea el texto en la parte superior del contenedor */
+    left: 0; /* Alinea el texto en la parte izquierda del contenedor */
+    background: rgba(0, 0, 0, 0.5); /* Agrega un fondo semi-transparente al texto */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    padding: 10px; /* Agrega espaciado alrededor del texto para que se vea mejor */
 }
