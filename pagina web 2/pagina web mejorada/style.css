@@ -95,8 +95,3 @@ p {
     cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el título */
 }
 
-#filtros {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el ancho de las columnas según tus necesidades */
-    grid-gap: 10px; /* Espacio entre los botones */
-}
