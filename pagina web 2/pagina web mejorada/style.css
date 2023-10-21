@@ -95,16 +95,8 @@ p {
     cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el título */
 }
 
-/* Estilos para los botones de filtros */
-#filtros .filtro {
-    display: inline-block; /* Mostrar los botones en línea horizontal */
-    margin-right: 10px; /* Agregar margen derecho para separar los botones */
-    background-color: #dbb134;
-    color: #fff;
-    padding: 5px 10px; /* Ajusta el espaciado dentro de los botones según tu preferencia */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: "Glacial Indifference", sans-serif;
-    font-size: 16px; /* Ajusta el tamaño de fuente según tu preferencia */
+#filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el ancho de las columnas según tus necesidades */
+    grid-gap: 10px; /* Espacio entre los botones */
 }
