@@ -1,0 +1,87 @@
+/* Reset de estilos para normalizar el comportamiento entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins Light', sans-serif;
+    font-weight: 100;
+    color: #555;
+}
+
+/* Enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedores principales */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Sección de encabezado */
+header {
+    background-color: #649277;
+    font-family: 'Poppins';
+    font-size: 56px;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.homebutton{
+    position: absolute;
+    top: 0;
+    left: 10;
+    fill: #fff;
+}
+
+#filtros {
+    text-align: center;
+}
+.filtro {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #649277;
+    color: #fff;
+    text-decoration: none;
+    margin: 4px;
+    border-radius: 5px;
+    font-family: "Abel", sans-serif;
+}
+
+
+main {
+    padding: 0px;
+}
+
+/* Sección de pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
