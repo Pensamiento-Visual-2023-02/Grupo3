@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+@font-face {
+
+    font-family: 'Poppins Black';
+    src: url('Font/Poppins-Black.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Black Italic';
+    src: url('Font/Poppins-BlackItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Bold';
+    src: url('Font/Poppins-Bold.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Bold Italic';
+    src: url('Font/Poppins-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Extra Bold';
+    src: url('Font/Poppins-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Extra Bold Italic';
+    src: url('Font/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Extra Light';
+    src: url('Font/Poppins-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Extra Light Italic';
+    src: url('Font/Poppins-ExtraLightItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Italic';
+    src: url('Font/Poppins-Italic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Light';
+    src: url('Font/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Light Italic';
+    src: url('Font/Poppins-LightItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Medium';
+    src: url('Font/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Medium Italic';
+    src: url('Font/Poppins-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Regular';
+    src: url('Font/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Semi Bold';
+    src: url('Font/Poppins-SemiBold.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Semi Bold Italic';
+    src: url('Font/Poppins-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Thin';
+    src: url('Font/Poppins-Thin.ttf') format('truetype');
+}
+@font-face {
+
+    font-family: 'Poppins Thin Italic';
+    src: url('Font/Poppins-ThinItalic.ttf') format('truetype');
+}
+
+  
+
+body {
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins Light', sans-serif;
+    font-weight: 100;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+header {
+    position: relative;
+    background-color: #649277;
+    font-family: 'Poppins Bold Italic';
+    font-size: 56px;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+
+
+.homebutton{
+    position: absolute;
+    top: 0;
+    left: 10;
+    fill: #fff;
+}
+
+.introduccion {
+    position: absolute;
+    top: 270px;
+    left: 50px;
+    right: 230px;
+    font-family: 'Poppins Light';
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+
+}
+  
+
+#filtros {
+    text-align: center;
+}
+.filtro {
+    display: inline-block;
+    position: relative;
+    top: 13px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: 'Poppins Semi Bold';
+    background-color: #649277;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+
+main {
+    padding: 0px;
+}
+
+/* Sección de pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
