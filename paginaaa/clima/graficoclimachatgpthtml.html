@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Gráfico del Clima</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="grafico-container"></div>
+
+    <!-- Carga el archivo de gráfico climático -->
+    <script src="graficoclimaversionchatgpt.js"></script>
+
+    <!-- Carga los datos de temperatura y de regiones de Chile -->
+    <script>
+        d3.json('https://climatologia.meteochile.gob.cl/application/servicios/getEstacionesRedEma?usuario=correo@correo.cl&token=apiKey_personal.json')
+            .then(function(temperaturaData) {
+                // Puedes trabajar con los datos de temperatura aquí
+                console.log(temperaturaData);
+            })
+            .catch(function(error) {
+                console.error('Error al cargar los datos de temperatura:', error);
+            });
+
+        d3.json('https://raw.githubusercontent.com/fcortes/Chile-GeoJSON/master/Regional.geojson')
+            .then(function(regioneschile) {
+                // Puedes trabajar con los datos de regiones de Chile aquí
+                console.log(regioneschile);
+            })
+            .catch(function(error) {
+                console.error('Error al cargar los datos de regiones de Chile:', error);
+            });
+    </script>
+</body>
+</html>
