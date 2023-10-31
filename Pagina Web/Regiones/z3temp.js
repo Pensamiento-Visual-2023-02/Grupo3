@@ -18,18 +18,18 @@ slider.oninput = function() {
 
 function updateTemperatureInfo(monthIndex) {
   var temperaturas = [
-    { min: 20, max: 25 },
-    { min: 20, max: 26 },
-    { min: 29, max: 25 },
-    { min: 18, max: 23 },
-    { min: 26, max: 21 },
-    { min: 15, max: 19 },
-    { min: 15, max: 18 },
-    { min: 15, max: 18 },
-    { min: 15, max: 19 },
-    { min: 16, max: 20 },
-    { min: 17, max: 22 },
-    { min: 19, max: 24 }
+    { min: 18, max: 25 },
+    { min: 18, max: 25 },
+    { min: 17, max: 24 },
+    { min: 16, max: 22 },
+    { min: 15, max: 20 },
+    { min: 14, max: 19 },
+    { min: 13, max: 18 },
+    { min: 14, max: 18 },
+    { min: 14, max: 19 },
+    { min: 15, max: 20 },
+    { min: 16, max: 22 },
+    { min: 17, max: 23 }
   ];
 
   var minTemp = temperaturas[monthIndex - 1].min;
