@@ -9,6 +9,8 @@
     <script type="text/javascript" src="../JQuery.js"></script>
     <script type="text/javascript" src="../aplicaciones.js"></script>
     <link rel="stylesheet" href="../estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="chartOhiggins.js"></script>
     
 
 </head>
@@ -36,8 +38,7 @@
       top: 50px;
       left: 1000px;
       stroke: #fff;
-      stroke-wid
-      th: 1px;
+      stroke-width: 1px;
    }
 
    #titulo_ap{
@@ -114,6 +115,10 @@
    <a class="filtro" href="Magallanes y Antártica Chilena.html">Magallanes</a>
 
  </div>
+
+ <div id="chart-wrapper">
+   <canvas id="ChartcitoOhiggins" width="50" height="50"></canvas> 
+</div>
 
  <p id = titulo_ap><strong>Áreas Protegidas</strong></p>
 
