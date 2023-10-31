@@ -7,8 +7,7 @@
     <title>Mi Primer Documento HTML</title>
     <script type="text/javascript" src="../JQuery.js"></script>
     <script type="text/javascript" src="../aplicaciones.js"></script>
-    <link rel="stylesheet" href="../estilo.css">
-    
+    <link rel="stylesheet" href="../estilo.css">    
 
 </head>
 
@@ -217,8 +216,19 @@
 
  </div>
 
+ <div class="slidecontainer">
+   <input type="range" min="1" max="12" value="1" id="myRange" class="slider" >
+   <p id="slidertitulo" style="font-family: 'Poppins Medium'; font-size: 15px;">Mes: <span id="value"></span></p>
+   <p id="minTemp" style="position: absolute; right: 75px; top: -25px; color: rgb(70, 168, 195);"></p>
+   <p id="maxTemp" style="position: absolute; left: 170px; top: -25px; color:rgb(246, 109, 85)"></p>
+
+</div>
+
 </script>
 
 </body>
+
+<script src="../slider.js"></script>
+
 
 </html>
