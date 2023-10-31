@@ -7,7 +7,9 @@
     <title>Mi Primer Documento HTML</title>
     <script type="text/javascript" src="../JQuery.js"></script>
     <script type="text/javascript" src="../aplicaciones.js"></script>
-    <link rel="stylesheet" href="../estilo.css">    
+    <link rel="stylesheet" href="../estilo.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="chartArica.js"></script>   
 
 </head>
 
@@ -37,6 +39,56 @@
       stroke: #fff;
       stroke-width: 1px;
    }
+
+   #titulo_ap{
+
+   position: relative;
+   margin-top: 200px;
+   margin-left: 50px;
+   margin-bottom: 25px;
+   font-family: "Abel", sans-serif;
+   font-size: 50px;
+
+   }
+
+   #intro_grafs{
+
+   position: relative;
+   margin-top: 25px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+   font-family: "Abel", sans-serif;
+   font-size: 25px;
+
+   }
+
+   #titulo{
+
+   position: relative;
+   margin-top: 25px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+   font-family: "Abel", sans-serif;
+   font-size: 30px;
+
+   }
+
+   .introduccion{
+   margin-top: 100px;
+   }
+
+   #observablehq-Grafico-ea99364b{
+   margin-left: 100px;
+   }
+
+   #observablehq-Grafico-ab13fc19{
+   margin-left: 100px;
+   }
+
+   #observablehq-Grafico-27be3650{
+   margin-left: 100px;
+   }
+
    </style>
 
    <div class="introduccion"> 
@@ -65,6 +117,53 @@
    <a class="filtro" href="Magallanes y Antártica Chilena.html">Magallanes</a>
 
  </div>
+
+ <div id="chart-wrapper">
+   <canvas id="ChartcitoArica" width="50" height="50"></canvas> 
+</div>
+
+ <p id = titulo_ap><strong>Áreas Protegidas</strong></p>
+
+ <p id = intro_grafs>Los siguientes gráficos fueron hechos con "D3 by Observable"</p>
+ 
+ <p id = titulo><strong>Cantidad:</strong></p>
+ 
+ <div id="observablehq-Grafico-ea99364b"></div>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+ <script type="module">
+ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+ import define from "https://api.observablehq.com/d/7b71bc8ffd2343b2@37.js?v=4";
+ new Runtime().module(define, name => {
+ if (name === "Grafico") return new Inspector(document.querySelector("#observablehq-Grafico-ea99364b"));
+ });
+ </script>
+
+<p id = titulo><strong>Superficie:</strong></p>
+
+<div id="observablehq-Grafico-ab13fc19"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5adc369f9e46abf9@47.js?v=4";
+new Runtime().module(define, name => {
+if (name === "Grafico") return new Inspector(document.querySelector("#observablehq-Grafico-ab13fc19"));
+});
+</script>
+
+<p id = titulo><strong>¿Se han creado áreas nuevas? ¿De que tamaño?</strong></p>
+
+<div id="observablehq-Grafico-27be3650"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/bdd46a9bd1347b96@49.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "Grafico") return new Inspector(document.querySelector("#observablehq-Grafico-27be3650"));
+    });
+    </script>
 
    <div class="mapa" id="mapachile"> 
       <svg

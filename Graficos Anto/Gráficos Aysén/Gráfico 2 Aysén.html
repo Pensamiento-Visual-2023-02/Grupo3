@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Untitled</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+    <div id="observablehq-grafico-78710d6e"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/77bc92c3f32b863f@27.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "grafico") return new Inspector(document.querySelector("#observablehq-grafico-78710d6e"));
+    });
+    </script>
+</body>

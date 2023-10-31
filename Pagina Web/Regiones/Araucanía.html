@@ -9,6 +9,8 @@
     <script type="text/javascript" src="../JQuery.js"></script>
     <script type="text/javascript" src="../aplicaciones.js"></script>
     <link rel="stylesheet" href="../estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="chartAraucania.js"></script>
     
 
 </head>
@@ -38,6 +40,55 @@
       stroke: #fff;
       stroke-width: 1px;
    }
+
+   #titulo_ap{
+
+   position: relative;
+   margin-top: 200px;
+   margin-left: 50px;
+   margin-bottom: 25px;
+   font-family: "Abel", sans-serif;
+   font-size: 50px;
+
+   }
+
+   #intro_grafs{
+
+   position: relative;
+   margin-top: 25px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+   font-family: "Abel", sans-serif;
+   font-size: 25px;
+
+   }
+
+   #titulo{
+
+   position: relative;
+   margin-top: 25px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+   font-family: "Abel", sans-serif;
+   font-size: 30px;
+
+   }
+
+   .introduccion{
+   margin-top: 100px;
+   }
+
+   #observablehq-grafico-ac9a6244{
+   margin-left: 100px;
+   }
+
+   #observablehq-grafico-55f357b6{
+   margin-left: 100px;
+   }
+
+   #observablehq-grafico-4375c866{
+   margin-left: 100px;
+   }
    </style>
 
 <div class="introduccion"> 
@@ -64,6 +115,54 @@
    <a class="filtro" href="Magallanes y Antártica Chilena.html">Magallanes</a>
 
  </div>
+
+ <div id="chart-wrapper">
+   <canvas id="ChartcitoAraucania" width="50" height="50"></canvas> 
+</div>
+
+ <p id = titulo_ap><strong>Áreas Protegidas</strong></p>
+
+<p id = intro_grafs>Los siguientes gráficos fueron hechos con "D3 by Observable"</p>
+
+<p id = titulo><strong>Cantidad:</strong></p>
+
+<div id="observablehq-grafico-ac9a6244"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/81c3b492121a434d@29.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "grafico") return new Inspector(document.querySelector("#observablehq-grafico-ac9a6244"));
+    });
+    </script>
+
+<p id = titulo><strong>Superficie:</strong></p>
+
+<div id="observablehq-grafico-55f357b6"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/d86114b7a4b4bd3e@31.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "grafico") return new Inspector(document.querySelector("#observablehq-grafico-55f357b6"));
+    });
+    </script>
+
+<p id = titulo><strong>¿Se han creado áreas nuevas? ¿De que tamaño?</strong></p>
+
+<div id="observablehq-grafico-4375c866"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/2e61910ef0771414@41.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "grafico") return new Inspector(document.querySelector("#observablehq-grafico-4375c866"));
+    });
+    </script>
+
    <div class="mapa" id="mapachile"> 
       <svg
       xmlns:mapsvg="http://mapsvg.com"
